@@ -1,29 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int t,diff,ques,i;
-    string s1,s2;
+int main(){
+    int t;
     cin>>t;
-    while(t--)
-    {
-        cin>>s1;
-        cin>>s2;
-        ques=0;
-        diff=0;
-        for(i=0;i<s1.size();i++)
-        {
-            if(s1[i]=='?' || s2[i]=='?')
-            {
-                ques++;
-            }
-            else if (s1[i]!=s2[i])
-            {
-                diff++;
-            }
+    while(t--){
+        int n;
+        cin>>n;
+        int arr[n];
+        for(int i=0;i<n;i++){
+            cin>>arr[i];
         }
-        cout<<diff<<" "<<diff+ques<<endl;
+        long long ans=0;
+        for(int i=0;i<n-1;i++){
+            ans+= (abs(arr[i+1]-arr[i])-1);
+        }
+        cout<<ans<<endl;
     }
-
-    return 0;
 }
