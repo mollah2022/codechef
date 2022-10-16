@@ -6,21 +6,27 @@ int main()
     cin>>t;
     while(t--)
     {
-        int x,k,l,p;
+        int x;
         cin>>x;
         int s1[x];
-        for(int i=0;i<x;i++)
+        int s2[x];
+        int i,j,s3[20],y;
+        for(i=0;i<x;i++)
         {
             cin>>s1[i];
-            k=max((s1[i]*20),(s1[i+1]*10));
         }
-        for(int j=0;j<x;j++)
+        for(j=0;j<x;j++)
         {
-            cin>>s1[j];
-            l=min((s1[j]*10),(s1[j+1]*10));
+            cin>>s2[j];
         }
-      if()
-        cout<<p<<endl;
+        for(i=0,j=0;i<x,j<x;i++,j++)
+        {
+            s3[i]=(s1[i]*20)-(s2[j]*10);
+             y=max(s3[i],s3[i+1]);
+             s3[i]=0;
+        }
+        cout<<y<<endl;
+
     }
     return 0;
 }
