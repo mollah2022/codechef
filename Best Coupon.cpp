@@ -6,10 +6,10 @@ int main()
     cin>>t;
     while(t--)
     {
-        int c,x,y,k;
-        cin>>c>>x>>y;
-        k=(c-x)*y;
-        cout<<k<<endl;
+        int x,k,p;
+        cin>>x;
+        p=(10*x)/100;
+        cout<<max(100,p)<<endl;
     }
     return 0;
 }

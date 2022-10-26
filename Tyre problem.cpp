@@ -6,9 +6,9 @@ int main()
     cin>>t;
     while(t--)
     {
-        int c,x,y,k;
-        cin>>c>>x>>y;
-        k=(c-x)*y;
+        int a,b,k;
+        cin>>a>>b;
+        k=(2*a)+(4*b);
         cout<<k<<endl;
     }
     return 0;

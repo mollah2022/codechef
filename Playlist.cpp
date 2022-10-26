@@ -6,10 +6,10 @@ int main()
     cin>>t;
     while(t--)
     {
-        int c,x,y,k;
-        cin>>c>>x>>y;
-        k=(c-x)*y;
+        int x,y,k;
+        cin>>x>>y;
+        k=x/(y*3);
         cout<<k<<endl;
     }
-    return 0;
+   return 0;
 }

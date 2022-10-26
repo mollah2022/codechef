@@ -6,10 +6,11 @@ int main()
     cin>>t;
     while(t--)
     {
-        int c,x,y,k;
-        cin>>c>>x>>y;
-        k=(c-x)*y;
-        cout<<k<<endl;
+        int x,y,z,p=0;
+        cin>>x>>y>>z;
+        p=(z-y)/x;
+        cout<<p<<endl;
+        p=0;
     }
     return 0;
 }
