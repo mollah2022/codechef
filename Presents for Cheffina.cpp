@@ -2,19 +2,20 @@
 using namespace std;
 int main()
 {
-    int t;
+    int t,k;
     cin>>t;
     while(t--)
     {
-        int a,b,c;
-        cin>>a>>b>>c;
-        if(c%b==0)
+        int x;
+        cin>>x;
+        if(x%5==0)
         {
-            cout<<"YES\n";
+            cout<<(x/5)*4<<endl;
         }
         else
         {
-            cout<<"NO\n";
+            k=x-(x/5);
+            cout<<k<<endl;
         }
     }
     return 0;

@@ -6,15 +6,15 @@ int main()
     cin>>t;
     while(t--)
     {
-        int a,b,c;
-        cin>>a>>b>>c;
-        if(c%b==0)
+        int x;
+        cin>>x;
+        if(x>10)
         {
-            cout<<"YES\n";
+            cout<<"-1\n";
         }
         else
         {
-            cout<<"NO\n";
+            cout<<"Thanks for helping Chef!\n";
         }
     }
     return 0;

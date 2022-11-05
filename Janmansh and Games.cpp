@@ -6,16 +6,15 @@ int main()
     cin>>t;
     while(t--)
     {
-        int a,b,c;
-        cin>>a>>b>>c;
-        if(c%b==0)
+        int x,y;
+        cin>>x>>y;
+        if(x%2==0)
         {
-            cout<<"YES\n";
+            cout<<"Janmansh\n";
         }
         else
         {
-            cout<<"NO\n";
+            cout<<"Jay\n";
         }
     }
-    return 0;
 }

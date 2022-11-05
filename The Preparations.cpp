@@ -6,9 +6,11 @@ int main()
     cin>>t;
     while(t--)
     {
-        int a,b,c;
-        cin>>a>>b>>c;
-        if(c%b==0)
+        int x,y,z;
+        cin>>x>>y>>z;
+        int k;
+        k=(y*z);
+        if(x>k)
         {
             cout<<"YES\n";
         }

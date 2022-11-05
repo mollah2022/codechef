@@ -6,9 +6,15 @@ int main()
     cin>>t;
     while(t--)
     {
-        int a,b,c;
-        cin>>a>>b>>c;
-        if(c%b==0)
+        long long int x,y,sum=0;
+        cin>>x>>y;
+        long long int s1[x];
+        for(int i=0;i<x;i++)
+        {
+            cin>>s1[i];
+            sum+=s1[i];
+        }
+        if(y>=sum)
         {
             cout<<"YES\n";
         }

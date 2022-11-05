@@ -6,9 +6,10 @@ int main()
     cin>>t;
     while(t--)
     {
-        int a,b,c;
-        cin>>a>>b>>c;
-        if(c%b==0)
+        int x,y,z,sum=0;
+        cin>>x>>y>>z;
+        sum=(x+y+z);
+        if(sum==180)
         {
             cout<<"YES\n";
         }

@@ -6,15 +6,16 @@ int main()
     cin>>t;
     while(t--)
     {
-        int a,b,c;
-        cin>>a>>b>>c;
-        if(c%b==0)
+        int n,k,x,y,p,l;
+        cin>>n>>k>>x>>y;
+        if(x>y)
         {
-            cout<<"YES\n";
+            p=(k*x)+(n-k)*y;
+            cout<<p<<endl;
         }
         else
         {
-            cout<<"NO\n";
+            cout<<x*n<<endl;
         }
     }
     return 0;

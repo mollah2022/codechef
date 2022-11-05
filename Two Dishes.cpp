@@ -6,9 +6,10 @@ int main()
     cin>>t;
     while(t--)
     {
-        int a,b,c;
-        cin>>a>>b>>c;
-        if(c%b==0)
+        int x,y,z,w,p;
+        cin>>x>>y>>z>>w;
+        p=y+w;
+        if(p>=x && z>=x)
         {
             cout<<"YES\n";
         }
