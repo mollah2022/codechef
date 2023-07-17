@@ -1,26 +1,39 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-	int t;
-	cin>>t;
-	while(t--){
-	    int n,k;
-	    cin>>n>>k;
-	    int arr[n];
-	    for(int i=0;i<n;i++){
-	        cin>>arr[i];
-	    }
-	    int max_girls=0;
-	    for(int i=0;i<n;i++){
-	        int sum=0;
-	        for(int j=i;j<i+k&&j<n;j++){
-	            sum+=arr[j];
-	           
-	        }
-	        max_girls=max(max_girls,sum);
-	    }
-	    cout<<max_girls<<endl;
-	}
-	return 0;
+int main(){
+    long long int t,i,n,max,cur;
+    
+    
+    cin>>t;
+    
+    
+    while(t--){
+        cin >> n;
+        int arr[n];
+        max=0;
+        cur=1;
+        
+        
+        for(i=0;i<n;i++){
+            cin >> arr[i];
+        }
+        
+        sort(arr,arr+n);
+        
+        
+        for(i=1;i<n;i++){
+            if(arr[i-1]==arr[i]) cur=cur+1;
+            else cur=1;
+            
+            if(cur>max) max=cur;
+        }
+        
+        
+        cout << n-max  << endl;
+        
+        
+    }
+    
+    return(0);
 }
