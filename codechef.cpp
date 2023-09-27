@@ -1,17 +1,32 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
-int32_t main()
-{
-	int t;
-	cin >> t;
-	while(t--)
-	{
-		int x,y,z; cin >> x >> y >> z;
-		int sum = (z/30);
-		int sum1 = (sum+x);
-		double ans = ceil(((double)sum1/y));
-		cout << ans <<endl;
-	}
-	return 0;
+int main() {
+    int N, K;
+    cin >> N >> K;
+    if (N % 2 == 1 && K % 2 == 0) {
+        cout << -1 << endl;
+    } else if (N % 2 == 0 && K % 2 == 1) {
+        cout << -1 << endl;
+    } else {
+        vector<int> A(N);
+        for (int i = 0; i < N / 2; i++) {
+            A[i] = 2;
+        }
+        for (int i = N / 2; i < N; i++) {
+            A[i] = 1;
+        }
+        int array_sum = 0;
+        for (int i = 0; i < N; i++) {
+            array_sum += A[i];
+        }
+        A[N - 1] += K - array_sum;
+        for (int i = 0; i < N; i++) {
+            cout << A[i] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
 }
