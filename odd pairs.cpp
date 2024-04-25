@@ -6,7 +6,7 @@ int main()
     cin>>t;
     while(t--)
     {
-        int x,p=0,s=0,r=0;
+      long long  int x,p=0,s=0,r=0;
         cin>>x;
         if(x%2==0)
         {
