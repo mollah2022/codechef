@@ -1,32 +1,39 @@
-#include <iostream>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int N, K;
-    cin >> N >> K;
-    if (N % 2 == 1 && K % 2 == 0) {
-        cout << -1 << endl;
-    } else if (N % 2 == 0 && K % 2 == 1) {
-        cout << -1 << endl;
-    } else {
-        vector<int> A(N);
-        for (int i = 0; i < N / 2; i++) {
-            A[i] = 2;
-        }
-        for (int i = N / 2; i < N; i++) {
-            A[i] = 1;
-        }
-        int array_sum = 0;
-        for (int i = 0; i < N; i++) {
-            array_sum += A[i];
-        }
-        A[N - 1] += K - array_sum;
-        for (int i = 0; i < N; i++) {
-            cout << A[i] << " ";
-        }
-        cout << endl;
-    }
-    return 0;
+	// your code goes here
+	int t; cin >> t;
+	while(t--){
+	       int n; cin >> n;
+	       vector<int>v1;
+	       for(int i=0;i<n;i++){
+	             int y; cin >> y;
+	             v1.push_back(y);
+	       }
+	       sort(v1.begin(),v1.end());
+	       reverse(v1.begin(),v1.end());
+	       int l = v1.size();
+	       int sum1=0,sum2=0;
+	       if(l%2!=0){
+                       for(int i=0;i<=v1.size()/2;i++){
+	             sum1+=v1[i];
+	       }
+	        for(int i=v1.size()/2+1;i<v1.size();i++){
+	             sum2+=v1[i];
+	       }
+               cout << sum1-sum2 << endl;
+               continue;
+	       }
+	       
+	       for(int i=0;i<v1.size()/2;i++){
+	             sum1+=v1[i];
+	       }
+	        for(int i=v1.size()/2;i<v1.size();i++){
+	             sum2+=v1[i];
+	       }
+
+	       cout << sum1-sum2 << endl;
+	}
+  return 0;
 }
